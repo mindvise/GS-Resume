@@ -1,0 +1,307 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D70CC93116D3FD5500E22ECC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D70CC93016D3FD5500E22ECC /* UIKit.framework */; };
+		D70CC93316D3FD5500E22ECC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D70CC93216D3FD5500E22ECC /* Foundation.framework */; };
+		D70CC93516D3FD5500E22ECC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D70CC93416D3FD5500E22ECC /* CoreGraphics.framework */; };
+		D70CC93B16D3FD5500E22ECC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D70CC93916D3FD5500E22ECC /* InfoPlist.strings */; };
+		D70CC93D16D3FD5500E22ECC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D70CC93C16D3FD5500E22ECC /* main.m */; };
+		D70CC94116D3FD5500E22ECC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D70CC94016D3FD5500E22ECC /* AppDelegate.m */; };
+		D70CC94316D3FD5500E22ECC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D70CC94216D3FD5500E22ECC /* Default.png */; };
+		D70CC94516D3FD5500E22ECC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D70CC94416D3FD5500E22ECC /* Default@2x.png */; };
+		D70CC94716D3FD5500E22ECC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D70CC94616D3FD5500E22ECC /* Default-568h@2x.png */; };
+		D70CC94A16D3FD5500E22ECC /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D70CC94816D3FD5500E22ECC /* MainStoryboard.storyboard */; };
+		D70CC94D16D3FD5500E22ECC /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D70CC94C16D3FD5500E22ECC /* MasterViewController.m */; };
+		D70CC95016D3FD5500E22ECC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D70CC94F16D3FD5500E22ECC /* DetailViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D70CC92C16D3FD5500E22ECC /* GS Resume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GS Resume.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D70CC93016D3FD5500E22ECC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D70CC93216D3FD5500E22ECC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D70CC93416D3FD5500E22ECC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D70CC93816D3FD5500E22ECC /* GS Resume-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GS Resume-Info.plist"; sourceTree = "<group>"; };
+		D70CC93A16D3FD5500E22ECC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D70CC93C16D3FD5500E22ECC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D70CC93E16D3FD5500E22ECC /* GS Resume-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GS Resume-Prefix.pch"; sourceTree = "<group>"; };
+		D70CC93F16D3FD5500E22ECC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D70CC94016D3FD5500E22ECC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D70CC94216D3FD5500E22ECC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D70CC94416D3FD5500E22ECC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		D70CC94616D3FD5500E22ECC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D70CC94916D3FD5500E22ECC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		D70CC94B16D3FD5500E22ECC /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		D70CC94C16D3FD5500E22ECC /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		D70CC94E16D3FD5500E22ECC /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		D70CC94F16D3FD5500E22ECC /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D70CC92916D3FD5500E22ECC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D70CC93116D3FD5500E22ECC /* UIKit.framework in Frameworks */,
+				D70CC93316D3FD5500E22ECC /* Foundation.framework in Frameworks */,
+				D70CC93516D3FD5500E22ECC /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D70CC92116D3FD5500E22ECC = {
+			isa = PBXGroup;
+			children = (
+				D70CC93616D3FD5500E22ECC /* GS Resume */,
+				D70CC92F16D3FD5500E22ECC /* Frameworks */,
+				D70CC92D16D3FD5500E22ECC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D70CC92D16D3FD5500E22ECC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D70CC92C16D3FD5500E22ECC /* GS Resume.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D70CC92F16D3FD5500E22ECC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D70CC93016D3FD5500E22ECC /* UIKit.framework */,
+				D70CC93216D3FD5500E22ECC /* Foundation.framework */,
+				D70CC93416D3FD5500E22ECC /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D70CC93616D3FD5500E22ECC /* GS Resume */ = {
+			isa = PBXGroup;
+			children = (
+				D70CC93F16D3FD5500E22ECC /* AppDelegate.h */,
+				D70CC94016D3FD5500E22ECC /* AppDelegate.m */,
+				D70CC94816D3FD5500E22ECC /* MainStoryboard.storyboard */,
+				D70CC94B16D3FD5500E22ECC /* MasterViewController.h */,
+				D70CC94C16D3FD5500E22ECC /* MasterViewController.m */,
+				D70CC94E16D3FD5500E22ECC /* DetailViewController.h */,
+				D70CC94F16D3FD5500E22ECC /* DetailViewController.m */,
+				D70CC93716D3FD5500E22ECC /* Supporting Files */,
+			);
+			path = "GS Resume";
+			sourceTree = "<group>";
+		};
+		D70CC93716D3FD5500E22ECC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D70CC93816D3FD5500E22ECC /* GS Resume-Info.plist */,
+				D70CC93916D3FD5500E22ECC /* InfoPlist.strings */,
+				D70CC93C16D3FD5500E22ECC /* main.m */,
+				D70CC93E16D3FD5500E22ECC /* GS Resume-Prefix.pch */,
+				D70CC94216D3FD5500E22ECC /* Default.png */,
+				D70CC94416D3FD5500E22ECC /* Default@2x.png */,
+				D70CC94616D3FD5500E22ECC /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D70CC92B16D3FD5500E22ECC /* GS Resume */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D70CC95316D3FD5500E22ECC /* Build configuration list for PBXNativeTarget "GS Resume" */;
+			buildPhases = (
+				D70CC92816D3FD5500E22ECC /* Sources */,
+				D70CC92916D3FD5500E22ECC /* Frameworks */,
+				D70CC92A16D3FD5500E22ECC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GS Resume";
+			productName = "GS Resume";
+			productReference = D70CC92C16D3FD5500E22ECC /* GS Resume.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D70CC92316D3FD5500E22ECC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = Shobe;
+			};
+			buildConfigurationList = D70CC92616D3FD5500E22ECC /* Build configuration list for PBXProject "GS Resume" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D70CC92116D3FD5500E22ECC;
+			productRefGroup = D70CC92D16D3FD5500E22ECC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D70CC92B16D3FD5500E22ECC /* GS Resume */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D70CC92A16D3FD5500E22ECC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D70CC93B16D3FD5500E22ECC /* InfoPlist.strings in Resources */,
+				D70CC94316D3FD5500E22ECC /* Default.png in Resources */,
+				D70CC94516D3FD5500E22ECC /* Default@2x.png in Resources */,
+				D70CC94716D3FD5500E22ECC /* Default-568h@2x.png in Resources */,
+				D70CC94A16D3FD5500E22ECC /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D70CC92816D3FD5500E22ECC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D70CC93D16D3FD5500E22ECC /* main.m in Sources */,
+				D70CC94116D3FD5500E22ECC /* AppDelegate.m in Sources */,
+				D70CC94D16D3FD5500E22ECC /* MasterViewController.m in Sources */,
+				D70CC95016D3FD5500E22ECC /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D70CC93916D3FD5500E22ECC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D70CC93A16D3FD5500E22ECC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D70CC94816D3FD5500E22ECC /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D70CC94916D3FD5500E22ECC /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D70CC95116D3FD5500E22ECC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		D70CC95216D3FD5500E22ECC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D70CC95416D3FD5500E22ECC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GS Resume/GS Resume-Prefix.pch";
+				INFOPLIST_FILE = "GS Resume/GS Resume-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D70CC95516D3FD5500E22ECC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GS Resume/GS Resume-Prefix.pch";
+				INFOPLIST_FILE = "GS Resume/GS Resume-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D70CC92616D3FD5500E22ECC /* Build configuration list for PBXProject "GS Resume" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D70CC95116D3FD5500E22ECC /* Debug */,
+				D70CC95216D3FD5500E22ECC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D70CC95316D3FD5500E22ECC /* Build configuration list for PBXNativeTarget "GS Resume" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D70CC95416D3FD5500E22ECC /* Debug */,
+				D70CC95516D3FD5500E22ECC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D70CC92316D3FD5500E22ECC /* Project object */;
+}

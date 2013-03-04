@@ -19,6 +19,33 @@
 		D70CC94A16D3FD5500E22ECC /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D70CC94816D3FD5500E22ECC /* MainStoryboard.storyboard */; };
 		D70CC94D16D3FD5500E22ECC /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D70CC94C16D3FD5500E22ECC /* MasterViewController.m */; };
 		D70CC95016D3FD5500E22ECC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D70CC94F16D3FD5500E22ECC /* DetailViewController.m */; };
+		D70CC95D16D3FEAF00E22ECC /* UIImage+GradientImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D70CC95C16D3FEAF00E22ECC /* UIImage+GradientImage.m */; };
+		D70CC95F16D401B900E22ECC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D70CC95E16D401B900E22ECC /* QuartzCore.framework */; };
+		D7922FD716D420D8007D055C /* ConwayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7922FD516D420D8007D055C /* ConwayViewController.m */; };
+		D7922FD816D420D8007D055C /* ConwayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7922FD616D420D8007D055C /* ConwayViewController.xib */; };
+		D7922FDE16D42567007D055C /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7922FDD16D42567007D055C /* CellView.xib */; };
+		D7CAB14016D55EAC00C65E47 /* PhotoManipulationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7CAB13E16D55EAC00C65E47 /* PhotoManipulationViewController.m */; };
+		D7CAB14116D55EAC00C65E47 /* PhotoManipulationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7CAB13F16D55EAC00C65E47 /* PhotoManipulationViewController.xib */; };
+		D7CAB14A16D57B5400C65E47 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7CAB14816D57B5400C65E47 /* CalendarViewController.m */; };
+		D7CAB14B16D57B5400C65E47 /* CalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7CAB14916D57B5400C65E47 /* CalendarViewController.xib */; };
+		D7FC594916D58B2B008A9B50 /* CalendarCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7FC594516D58B2A008A9B50 /* CalendarCellView.xib */; };
+		D7FC594A16D58B2B008A9B50 /* CalendarControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7FC594716D58B2A008A9B50 /* CalendarControlViewController.m */; };
+		D7FC594B16D58B2B008A9B50 /* CalendarControlViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7FC594816D58B2A008A9B50 /* CalendarControlViewController.xib */; };
+		D7FC596C16DBF079008A9B50 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7FC596B16DBF079008A9B50 /* MessageUI.framework */; };
+		D7FC5B3816DD31FC008A9B50 /* BinaryClockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7FC5B3616DD31FC008A9B50 /* BinaryClockViewController.m */; };
+		D7FC5B3916DD31FC008A9B50 /* BinaryClockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7FC5B3716DD31FC008A9B50 /* BinaryClockViewController.xib */; };
+		D7FC5B3C16DD358F008A9B50 /* blueColor.png in Resources */ = {isa = PBXBuildFile; fileRef = D7FC5B3A16DD358F008A9B50 /* blueColor.png */; };
+		D7FC5B3D16DD358F008A9B50 /* grayColor.png in Resources */ = {isa = PBXBuildFile; fileRef = D7FC5B3B16DD358F008A9B50 /* grayColor.png */; };
+		D7FC5B3F16DD4675008A9B50 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7FC5B3E16DD4675008A9B50 /* CoreImage.framework */; };
+		D7FC5B4316DD471E008A9B50 /* FilterOptionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7FC5B4116DD471D008A9B50 /* FilterOptionsTableViewController.m */; };
+		D7FC5B4416DD471E008A9B50 /* FilterOptionsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7FC5B4216DD471D008A9B50 /* FilterOptionsTableViewController.xib */; };
+		D7FC5B4616DD4DD6008A9B50 /* testImage.png in Resources */ = {isa = PBXBuildFile; fileRef = D7FC5B4516DD4DD5008A9B50 /* testImage.png */; };
+		D7FC5B4E16DE9073008A9B50 /* ConwayInfoModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7FC5B4C16DE9073008A9B50 /* ConwayInfoModalViewController.m */; };
+		D7FC5B4F16DE9073008A9B50 /* ConwayInfoModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7FC5B4D16DE9073008A9B50 /* ConwayInfoModalViewController.xib */; };
+		D7FC5D0316E13348008A9B50 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7FC5D0216E13348008A9B50 /* MapKit.framework */; };
+		D7FC5D0916E133A9008A9B50 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7FC5D0716E133A9008A9B50 /* MapViewController.m */; };
+		D7FC5D0A16E133A9008A9B50 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7FC5D0816E133A9008A9B50 /* MapViewController.xib */; };
+		D7FC5D0C16E13DAD008A9B50 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7FC5D0B16E13DAD008A9B50 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +67,42 @@
 		D70CC94C16D3FD5500E22ECC /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		D70CC94E16D3FD5500E22ECC /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		D70CC94F16D3FD5500E22ECC /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		D70CC95B16D3FEAF00E22ECC /* UIImage+GradientImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GradientImage.h"; sourceTree = "<group>"; };
+		D70CC95C16D3FEAF00E22ECC /* UIImage+GradientImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GradientImage.m"; sourceTree = "<group>"; };
+		D70CC95E16D401B900E22ECC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D7922FD416D420D8007D055C /* ConwayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConwayViewController.h; sourceTree = "<group>"; };
+		D7922FD516D420D8007D055C /* ConwayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConwayViewController.m; sourceTree = "<group>"; };
+		D7922FD616D420D8007D055C /* ConwayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConwayViewController.xib; sourceTree = "<group>"; };
+		D7922FDD16D42567007D055C /* CellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellView.xib; sourceTree = "<group>"; };
+		D7CAB13D16D55EAC00C65E47 /* PhotoManipulationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoManipulationViewController.h; sourceTree = "<group>"; };
+		D7CAB13E16D55EAC00C65E47 /* PhotoManipulationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoManipulationViewController.m; sourceTree = "<group>"; };
+		D7CAB13F16D55EAC00C65E47 /* PhotoManipulationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoManipulationViewController.xib; sourceTree = "<group>"; };
+		D7CAB14716D57B5400C65E47 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		D7CAB14816D57B5400C65E47 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		D7CAB14916D57B5400C65E47 /* CalendarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarViewController.xib; sourceTree = "<group>"; };
+		D7FC594516D58B2A008A9B50 /* CalendarCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarCellView.xib; sourceTree = "<group>"; };
+		D7FC594616D58B2A008A9B50 /* CalendarControlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarControlViewController.h; sourceTree = "<group>"; };
+		D7FC594716D58B2A008A9B50 /* CalendarControlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarControlViewController.m; sourceTree = "<group>"; };
+		D7FC594816D58B2A008A9B50 /* CalendarControlViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarControlViewController.xib; sourceTree = "<group>"; };
+		D7FC596B16DBF079008A9B50 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		D7FC5B3516DD31FC008A9B50 /* BinaryClockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryClockViewController.h; sourceTree = "<group>"; };
+		D7FC5B3616DD31FC008A9B50 /* BinaryClockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinaryClockViewController.m; sourceTree = "<group>"; };
+		D7FC5B3716DD31FC008A9B50 /* BinaryClockViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BinaryClockViewController.xib; sourceTree = "<group>"; };
+		D7FC5B3A16DD358F008A9B50 /* blueColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueColor.png; sourceTree = "<group>"; };
+		D7FC5B3B16DD358F008A9B50 /* grayColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grayColor.png; sourceTree = "<group>"; };
+		D7FC5B3E16DD4675008A9B50 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		D7FC5B4016DD471D008A9B50 /* FilterOptionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterOptionsTableViewController.h; sourceTree = "<group>"; };
+		D7FC5B4116DD471D008A9B50 /* FilterOptionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterOptionsTableViewController.m; sourceTree = "<group>"; };
+		D7FC5B4216DD471D008A9B50 /* FilterOptionsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterOptionsTableViewController.xib; sourceTree = "<group>"; };
+		D7FC5B4516DD4DD5008A9B50 /* testImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testImage.png; sourceTree = "<group>"; };
+		D7FC5B4B16DE9073008A9B50 /* ConwayInfoModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConwayInfoModalViewController.h; sourceTree = "<group>"; };
+		D7FC5B4C16DE9073008A9B50 /* ConwayInfoModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConwayInfoModalViewController.m; sourceTree = "<group>"; };
+		D7FC5B4D16DE9073008A9B50 /* ConwayInfoModalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConwayInfoModalViewController.xib; sourceTree = "<group>"; };
+		D7FC5D0216E13348008A9B50 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D7FC5D0616E133A9008A9B50 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		D7FC5D0716E133A9008A9B50 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		D7FC5D0816E133A9008A9B50 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		D7FC5D0B16E13DAD008A9B50 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +110,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7FC5D0C16E13DAD008A9B50 /* CoreLocation.framework in Frameworks */,
+				D7FC5D0316E13348008A9B50 /* MapKit.framework in Frameworks */,
+				D7FC5B3F16DD4675008A9B50 /* CoreImage.framework in Frameworks */,
+				D7FC596C16DBF079008A9B50 /* MessageUI.framework in Frameworks */,
+				D70CC95F16D401B900E22ECC /* QuartzCore.framework in Frameworks */,
 				D70CC93116D3FD5500E22ECC /* UIKit.framework in Frameworks */,
 				D70CC93316D3FD5500E22ECC /* Foundation.framework in Frameworks */,
 				D70CC93516D3FD5500E22ECC /* CoreGraphics.framework in Frameworks */,
@@ -76,6 +144,11 @@
 		D70CC92F16D3FD5500E22ECC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D7FC5D0B16E13DAD008A9B50 /* CoreLocation.framework */,
+				D7FC5D0216E13348008A9B50 /* MapKit.framework */,
+				D7FC5B3E16DD4675008A9B50 /* CoreImage.framework */,
+				D7FC596B16DBF079008A9B50 /* MessageUI.framework */,
+				D70CC95E16D401B900E22ECC /* QuartzCore.framework */,
 				D70CC93016D3FD5500E22ECC /* UIKit.framework */,
 				D70CC93216D3FD5500E22ECC /* Foundation.framework */,
 				D70CC93416D3FD5500E22ECC /* CoreGraphics.framework */,
@@ -91,8 +164,8 @@
 				D70CC94816D3FD5500E22ECC /* MainStoryboard.storyboard */,
 				D70CC94B16D3FD5500E22ECC /* MasterViewController.h */,
 				D70CC94C16D3FD5500E22ECC /* MasterViewController.m */,
-				D70CC94E16D3FD5500E22ECC /* DetailViewController.h */,
-				D70CC94F16D3FD5500E22ECC /* DetailViewController.m */,
+				D7922FD116D420A1007D055C /* Detail View */,
+				D70CC95A16D3FE7F00E22ECC /* Utilities */,
 				D70CC93716D3FD5500E22ECC /* Supporting Files */,
 			);
 			path = "GS Resume";
@@ -110,6 +183,93 @@
 				D70CC94616D3FD5500E22ECC /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D70CC95A16D3FE7F00E22ECC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D70CC95B16D3FEAF00E22ECC /* UIImage+GradientImage.h */,
+				D70CC95C16D3FEAF00E22ECC /* UIImage+GradientImage.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		D7922FD116D420A1007D055C /* Detail View */ = {
+			isa = PBXGroup;
+			children = (
+				D70CC94E16D3FD5500E22ECC /* DetailViewController.h */,
+				D70CC94F16D3FD5500E22ECC /* DetailViewController.m */,
+				D7CAB13B16D55E7800C65E47 /* Photo Manipulation */,
+				D7FC5B2F16DD316C008A9B50 /* Binary Clock */,
+				D7CAB14616D57B2F00C65E47 /* Calendar */,
+				D7FC5D0516E13350008A9B50 /* Map View */,
+				D7922FD316D420B2007D055C /* Conway */,
+			);
+			name = "Detail View";
+			sourceTree = "<group>";
+		};
+		D7922FD316D420B2007D055C /* Conway */ = {
+			isa = PBXGroup;
+			children = (
+				D7922FD416D420D8007D055C /* ConwayViewController.h */,
+				D7922FD516D420D8007D055C /* ConwayViewController.m */,
+				D7922FD616D420D8007D055C /* ConwayViewController.xib */,
+				D7922FDD16D42567007D055C /* CellView.xib */,
+				D7FC5B4B16DE9073008A9B50 /* ConwayInfoModalViewController.h */,
+				D7FC5B4C16DE9073008A9B50 /* ConwayInfoModalViewController.m */,
+				D7FC5B4D16DE9073008A9B50 /* ConwayInfoModalViewController.xib */,
+			);
+			name = Conway;
+			sourceTree = "<group>";
+		};
+		D7CAB13B16D55E7800C65E47 /* Photo Manipulation */ = {
+			isa = PBXGroup;
+			children = (
+				D7FC5B4516DD4DD5008A9B50 /* testImage.png */,
+				D7CAB13D16D55EAC00C65E47 /* PhotoManipulationViewController.h */,
+				D7CAB13E16D55EAC00C65E47 /* PhotoManipulationViewController.m */,
+				D7CAB13F16D55EAC00C65E47 /* PhotoManipulationViewController.xib */,
+				D7FC5B4016DD471D008A9B50 /* FilterOptionsTableViewController.h */,
+				D7FC5B4116DD471D008A9B50 /* FilterOptionsTableViewController.m */,
+				D7FC5B4216DD471D008A9B50 /* FilterOptionsTableViewController.xib */,
+			);
+			name = "Photo Manipulation";
+			sourceTree = "<group>";
+		};
+		D7CAB14616D57B2F00C65E47 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				D7CAB14716D57B5400C65E47 /* CalendarViewController.h */,
+				D7CAB14816D57B5400C65E47 /* CalendarViewController.m */,
+				D7CAB14916D57B5400C65E47 /* CalendarViewController.xib */,
+				D7FC594616D58B2A008A9B50 /* CalendarControlViewController.h */,
+				D7FC594716D58B2A008A9B50 /* CalendarControlViewController.m */,
+				D7FC594816D58B2A008A9B50 /* CalendarControlViewController.xib */,
+				D7FC594516D58B2A008A9B50 /* CalendarCellView.xib */,
+			);
+			name = Calendar;
+			sourceTree = "<group>";
+		};
+		D7FC5B2F16DD316C008A9B50 /* Binary Clock */ = {
+			isa = PBXGroup;
+			children = (
+				D7FC5B3516DD31FC008A9B50 /* BinaryClockViewController.h */,
+				D7FC5B3616DD31FC008A9B50 /* BinaryClockViewController.m */,
+				D7FC5B3716DD31FC008A9B50 /* BinaryClockViewController.xib */,
+				D7FC5B3A16DD358F008A9B50 /* blueColor.png */,
+				D7FC5B3B16DD358F008A9B50 /* grayColor.png */,
+			);
+			name = "Binary Clock";
+			sourceTree = "<group>";
+		};
+		D7FC5D0516E13350008A9B50 /* Map View */ = {
+			isa = PBXGroup;
+			children = (
+				D7FC5D0616E133A9008A9B50 /* MapViewController.h */,
+				D7FC5D0716E133A9008A9B50 /* MapViewController.m */,
+				D7FC5D0816E133A9008A9B50 /* MapViewController.xib */,
+			);
+			name = "Map View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +328,19 @@
 				D70CC94516D3FD5500E22ECC /* Default@2x.png in Resources */,
 				D70CC94716D3FD5500E22ECC /* Default-568h@2x.png in Resources */,
 				D70CC94A16D3FD5500E22ECC /* MainStoryboard.storyboard in Resources */,
+				D7922FD816D420D8007D055C /* ConwayViewController.xib in Resources */,
+				D7922FDE16D42567007D055C /* CellView.xib in Resources */,
+				D7CAB14116D55EAC00C65E47 /* PhotoManipulationViewController.xib in Resources */,
+				D7CAB14B16D57B5400C65E47 /* CalendarViewController.xib in Resources */,
+				D7FC594916D58B2B008A9B50 /* CalendarCellView.xib in Resources */,
+				D7FC594B16D58B2B008A9B50 /* CalendarControlViewController.xib in Resources */,
+				D7FC5B3916DD31FC008A9B50 /* BinaryClockViewController.xib in Resources */,
+				D7FC5B3C16DD358F008A9B50 /* blueColor.png in Resources */,
+				D7FC5B3D16DD358F008A9B50 /* grayColor.png in Resources */,
+				D7FC5B4416DD471E008A9B50 /* FilterOptionsTableViewController.xib in Resources */,
+				D7FC5B4616DD4DD6008A9B50 /* testImage.png in Resources */,
+				D7FC5B4F16DE9073008A9B50 /* ConwayInfoModalViewController.xib in Resources */,
+				D7FC5D0A16E133A9008A9B50 /* MapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +355,15 @@
 				D70CC94116D3FD5500E22ECC /* AppDelegate.m in Sources */,
 				D70CC94D16D3FD5500E22ECC /* MasterViewController.m in Sources */,
 				D70CC95016D3FD5500E22ECC /* DetailViewController.m in Sources */,
+				D70CC95D16D3FEAF00E22ECC /* UIImage+GradientImage.m in Sources */,
+				D7922FD716D420D8007D055C /* ConwayViewController.m in Sources */,
+				D7CAB14016D55EAC00C65E47 /* PhotoManipulationViewController.m in Sources */,
+				D7CAB14A16D57B5400C65E47 /* CalendarViewController.m in Sources */,
+				D7FC594A16D58B2B008A9B50 /* CalendarControlViewController.m in Sources */,
+				D7FC5B3816DD31FC008A9B50 /* BinaryClockViewController.m in Sources */,
+				D7FC5B4316DD471E008A9B50 /* FilterOptionsTableViewController.m in Sources */,
+				D7FC5B4E16DE9073008A9B50 /* ConwayInfoModalViewController.m in Sources */,
+				D7FC5D0916E133A9008A9B50 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +482,7 @@
 				D70CC95516D3FD5500E22ECC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

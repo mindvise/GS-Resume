@@ -171,9 +171,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 6)
+    if (indexPath.row == 7)
     {
-        [self.detailViewController setDetailView:6];
+        [self.detailViewController setDetailView:7];
     }
     else
     {

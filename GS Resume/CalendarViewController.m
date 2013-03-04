@@ -14,6 +14,7 @@
     
     __weak IBOutlet UILabel *dateSelectedLabel;
     CalendarControlViewController *calendar;
+    __weak IBOutlet UIView *calendarControlContainer;
 }
 
 - (IBAction)dateValueChanged:(UIDatePicker *)sender;
@@ -37,12 +38,8 @@
     
     calendar = [[CalendarControlViewController alloc] initWithTarget:self andSelector:@selector(calendarControlDateSelected:) asPopoverContentViewController:NO];
     
-    CGRect frame = calendar.view.frame;
-    frame.origin.x = 363;
-    frame.origin.y = 155;
-    calendar.view.frame = frame;
     
-    [self.view addSubview:calendar.view];
+    [calendarControlContainer addSubview:calendar.view];
 }
 
 - (void)didReceiveMemoryWarning

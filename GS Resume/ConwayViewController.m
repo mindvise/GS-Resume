@@ -270,6 +270,8 @@
 {
     if (sender.tag == 0)
     {
+        lifeGridCollectionView.userInteractionEnabled = NO;
+        
         sender.title = @"Stop";
         sender.tag = 1;
         
@@ -279,13 +281,15 @@
     }
     else
     {
+        [lifeTimer invalidate];
+        lifeTimer = nil;
+        
         sender.title = @"Start";
         sender.tag = 0;
         
         clearBarButton.enabled = YES;
         
-        [lifeTimer invalidate];
-        lifeTimer = nil;
+        lifeGridCollectionView.userInteractionEnabled = YES;
     }
 }
 

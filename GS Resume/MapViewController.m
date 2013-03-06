@@ -73,10 +73,21 @@
             span.longitudeDelta=0.2;
             region.span = span;
             
+            
             MapAnnotation *annotation = [[MapAnnotation alloc] init];
-            annotation.coordinate = ((CLPlacemark*)placemarks[0]).location.coordinate;
-            annotation.title = @"Searched Location";
-            annotation.subtitle = addressField.text;
+            CLPlacemark *placemark = placemarks[0];
+            annotation.coordinate = placemark.location.coordinate;
+            
+            if (placemark.areasOfInterest.count > 0)
+            {
+                annotation.title = placemark.areasOfInterest[0];
+            }
+            else
+            {
+                annotation.title = @"Searched Address";
+            }
+            
+            annotation.subtitle = ABCreateStringWithAddressDictionary(placemark.addressDictionary, NO);
             region.center = annotation.coordinate;
             
             [mapView addAnnotation:annotation];

@@ -14,6 +14,7 @@
 		5DC2FC8916E6EC6E00D8A12F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DC2FC8816E6EC6E00D8A12F /* MobileCoreServices.framework */; };
 		5DC2FC8E16E6ECFE00D8A12F /* VideoRecorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC2FC8C16E6ECFE00D8A12F /* VideoRecorderViewController.m */; };
 		5DC2FC8F16E6ECFE00D8A12F /* VideoRecorderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC2FC8D16E6ECFE00D8A12F /* VideoRecorderViewController.xib */; };
+		5DC2FC9116E705B000D8A12F /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DC2FC9016E705B000D8A12F /* AddressBookUI.framework */; };
 		D70CC93116D3FD5500E22ECC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D70CC93016D3FD5500E22ECC /* UIKit.framework */; };
 		D70CC93316D3FD5500E22ECC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D70CC93216D3FD5500E22ECC /* Foundation.framework */; };
 		D70CC93516D3FD5500E22ECC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D70CC93416D3FD5500E22ECC /* CoreGraphics.framework */; };
@@ -64,6 +65,7 @@
 		5DC2FC8B16E6ECFE00D8A12F /* VideoRecorderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoRecorderViewController.h; sourceTree = "<group>"; };
 		5DC2FC8C16E6ECFE00D8A12F /* VideoRecorderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoRecorderViewController.m; sourceTree = "<group>"; };
 		5DC2FC8D16E6ECFE00D8A12F /* VideoRecorderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoRecorderViewController.xib; sourceTree = "<group>"; };
+		5DC2FC9016E705B000D8A12F /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		D70CC92C16D3FD5500E22ECC /* GS Resume.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GS Resume.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D70CC93016D3FD5500E22ECC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D70CC93216D3FD5500E22ECC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -125,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DC2FC9116E705B000D8A12F /* AddressBookUI.framework in Frameworks */,
 				5DC2FC8916E6EC6E00D8A12F /* MobileCoreServices.framework in Frameworks */,
 				5DC2FC8716E6EC6000D8A12F /* MediaPlayer.framework in Frameworks */,
 				5DC2FC8516E6EC5800D8A12F /* CoreMedia.framework in Frameworks */,
@@ -174,6 +177,7 @@
 		D70CC92F16D3FD5500E22ECC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5DC2FC9016E705B000D8A12F /* AddressBookUI.framework */,
 				5DC2FC8816E6EC6E00D8A12F /* MobileCoreServices.framework */,
 				5DC2FC8616E6EC6000D8A12F /* MediaPlayer.framework */,
 				5DC2FC8416E6EC5800D8A12F /* CoreMedia.framework */,

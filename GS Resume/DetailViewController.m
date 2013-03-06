@@ -11,6 +11,7 @@
 #import "PhotoManipulationViewController.h"
 #import "CalendarViewController.h"
 #import "BinaryClockViewController.h"
+#import "VideoRecorderViewController.h"
 #import "MapViewController.h"
 #import "ConwayViewController.h"
 
@@ -72,6 +73,7 @@
                 
             case 4:
                 [self.navigationItem setTitle:@"Video Record"];
+                selectedViewController = [[VideoRecorderViewController alloc] init];
                 break;
                 
             case 5:

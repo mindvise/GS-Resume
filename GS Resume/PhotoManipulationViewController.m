@@ -14,6 +14,7 @@
     UIImage *image;
     __weak IBOutlet UIImageView *imageView;
     __weak IBOutlet UIButton *imageButton;
+    __weak IBOutlet UILabel *takePhotoLabel;
     
     UIPopoverController *filterPopover;
 }
@@ -38,9 +39,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    image = [UIImage imageNamed:@"testImage"];
-    imageView.image = image;
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,6 +58,7 @@
         camera.allowsEditing = YES;
         camera.showsCameraControls = YES;
         
+        camera.wantsFullScreenLayout = YES;
         [self presentViewController:camera animated:YES completion:nil];
     }
     else
@@ -85,6 +84,9 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
+    [takePhotoLabel removeFromSuperview];
+    takePhotoLabel = nil;
+    
     image = [info objectForKey:UIImagePickerControllerEditedImage];
     imageView.image = image;
     

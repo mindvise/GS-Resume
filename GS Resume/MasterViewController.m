@@ -171,6 +171,16 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (indexPath.row == 4)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Not Yet Implemented" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        
+        [alert show];
+        alert = nil;
+        
+        return;
+    }
+    
     if (indexPath.row == 7)
     {
         [self.detailViewController setDetailView:7];

@@ -87,6 +87,8 @@
 {
     image = [info objectForKey:UIImagePickerControllerEditedImage];
     imageView.image = image;
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)applyFilter:(CIFilter*)filter

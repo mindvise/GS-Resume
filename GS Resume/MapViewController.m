@@ -98,7 +98,10 @@
         {
             NSLog(@"%@", error.debugDescription);
             
-//            UIAlertView *alert = 
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Unable To Find Address" message:@"Please check the address and try again." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            
+            [alert show];
+            alert = nil;
         }
     }];
 }

@@ -47,7 +47,6 @@
 		D7FC5B3F16DD4675008A9B50 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7FC5B3E16DD4675008A9B50 /* CoreImage.framework */; };
 		D7FC5B4316DD471E008A9B50 /* FilterOptionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7FC5B4116DD471D008A9B50 /* FilterOptionsTableViewController.m */; };
 		D7FC5B4416DD471E008A9B50 /* FilterOptionsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7FC5B4216DD471D008A9B50 /* FilterOptionsTableViewController.xib */; };
-		D7FC5B4616DD4DD6008A9B50 /* testImage.png in Resources */ = {isa = PBXBuildFile; fileRef = D7FC5B4516DD4DD5008A9B50 /* testImage.png */; };
 		D7FC5B4E16DE9073008A9B50 /* ConwayInfoModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7FC5B4C16DE9073008A9B50 /* ConwayInfoModalViewController.m */; };
 		D7FC5B4F16DE9073008A9B50 /* ConwayInfoModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7FC5B4D16DE9073008A9B50 /* ConwayInfoModalViewController.xib */; };
 		D7FC5D0316E13348008A9B50 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7FC5D0216E13348008A9B50 /* MapKit.framework */; };
@@ -111,7 +110,6 @@
 		D7FC5B4016DD471D008A9B50 /* FilterOptionsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterOptionsTableViewController.h; sourceTree = "<group>"; };
 		D7FC5B4116DD471D008A9B50 /* FilterOptionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterOptionsTableViewController.m; sourceTree = "<group>"; };
 		D7FC5B4216DD471D008A9B50 /* FilterOptionsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterOptionsTableViewController.xib; sourceTree = "<group>"; };
-		D7FC5B4516DD4DD5008A9B50 /* testImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testImage.png; sourceTree = "<group>"; };
 		D7FC5B4B16DE9073008A9B50 /* ConwayInfoModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConwayInfoModalViewController.h; sourceTree = "<group>"; };
 		D7FC5B4C16DE9073008A9B50 /* ConwayInfoModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConwayInfoModalViewController.m; sourceTree = "<group>"; };
 		D7FC5B4D16DE9073008A9B50 /* ConwayInfoModalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConwayInfoModalViewController.xib; sourceTree = "<group>"; };
@@ -265,7 +263,6 @@
 		D7CAB13B16D55E7800C65E47 /* Photo Manipulation */ = {
 			isa = PBXGroup;
 			children = (
-				D7FC5B4516DD4DD5008A9B50 /* testImage.png */,
 				D7CAB13D16D55EAC00C65E47 /* PhotoManipulationViewController.h */,
 				D7CAB13E16D55EAC00C65E47 /* PhotoManipulationViewController.m */,
 				D7CAB13F16D55EAC00C65E47 /* PhotoManipulationViewController.xib */,
@@ -378,7 +375,6 @@
 				D7FC5B3C16DD358F008A9B50 /* blueColor.png in Resources */,
 				D7FC5B3D16DD358F008A9B50 /* grayColor.png in Resources */,
 				D7FC5B4416DD471E008A9B50 /* FilterOptionsTableViewController.xib in Resources */,
-				D7FC5B4616DD4DD6008A9B50 /* testImage.png in Resources */,
 				D7FC5B4F16DE9073008A9B50 /* ConwayInfoModalViewController.xib in Resources */,
 				D7FC5D0A16E133A9008A9B50 /* MapViewController.xib in Resources */,
 				5DC2FC8F16E6ECFE00D8A12F /* VideoRecorderViewController.xib in Resources */,

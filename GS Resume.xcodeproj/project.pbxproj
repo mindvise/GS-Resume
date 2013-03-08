@@ -29,6 +29,9 @@
 		D70CC95016D3FD5500E22ECC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D70CC94F16D3FD5500E22ECC /* DetailViewController.m */; };
 		D70CC95D16D3FEAF00E22ECC /* UIImage+GradientImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D70CC95C16D3FEAF00E22ECC /* UIImage+GradientImage.m */; };
 		D70CC95F16D401B900E22ECC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D70CC95E16D401B900E22ECC /* QuartzCore.framework */; };
+		D772F28A16E91BD8007B64F8 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D772F28916E91BD8007B64F8 /* GLKit.framework */; };
+		D772F28C16E91BE1007B64F8 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D772F28B16E91BE1007B64F8 /* OpenGLES.framework */; };
+		D772F29F16E93918007B64F8 /* GLKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D772F29E16E93918007B64F8 /* GLKitViewController.m */; };
 		D7922FD716D420D8007D055C /* ConwayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7922FD516D420D8007D055C /* ConwayViewController.m */; };
 		D7922FD816D420D8007D055C /* ConwayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7922FD616D420D8007D055C /* ConwayViewController.xib */; };
 		D7922FDE16D42567007D055C /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7922FDD16D42567007D055C /* CellView.xib */; };
@@ -86,6 +89,11 @@
 		D70CC95B16D3FEAF00E22ECC /* UIImage+GradientImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GradientImage.h"; sourceTree = "<group>"; };
 		D70CC95C16D3FEAF00E22ECC /* UIImage+GradientImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GradientImage.m"; sourceTree = "<group>"; };
 		D70CC95E16D401B900E22ECC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D772F28916E91BD8007B64F8 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		D772F28B16E91BE1007B64F8 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		D772F28D16E92230007B64F8 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = ../Constants.h; sourceTree = "<group>"; };
+		D772F29D16E93918007B64F8 /* GLKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLKitViewController.h; sourceTree = "<group>"; };
+		D772F29E16E93918007B64F8 /* GLKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLKitViewController.m; sourceTree = "<group>"; };
 		D7922FD416D420D8007D055C /* ConwayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConwayViewController.h; sourceTree = "<group>"; };
 		D7922FD516D420D8007D055C /* ConwayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConwayViewController.m; sourceTree = "<group>"; };
 		D7922FD616D420D8007D055C /* ConwayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConwayViewController.xib; sourceTree = "<group>"; };
@@ -125,6 +133,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D772F28C16E91BE1007B64F8 /* OpenGLES.framework in Frameworks */,
+				D772F28A16E91BD8007B64F8 /* GLKit.framework in Frameworks */,
 				5DC2FC9116E705B000D8A12F /* AddressBookUI.framework in Frameworks */,
 				5DC2FC8916E6EC6E00D8A12F /* MobileCoreServices.framework in Frameworks */,
 				5DC2FC8716E6EC6000D8A12F /* MediaPlayer.framework in Frameworks */,
@@ -175,6 +185,8 @@
 		D70CC92F16D3FD5500E22ECC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D772F28B16E91BE1007B64F8 /* OpenGLES.framework */,
+				D772F28916E91BD8007B64F8 /* GLKit.framework */,
 				5DC2FC9016E705B000D8A12F /* AddressBookUI.framework */,
 				5DC2FC8816E6EC6E00D8A12F /* MobileCoreServices.framework */,
 				5DC2FC8616E6EC6000D8A12F /* MediaPlayer.framework */,
@@ -227,8 +239,18 @@
 			children = (
 				D70CC95B16D3FEAF00E22ECC /* UIImage+GradientImage.h */,
 				D70CC95C16D3FEAF00E22ECC /* UIImage+GradientImage.m */,
+				D772F28D16E92230007B64F8 /* Constants.h */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		D772F28216E9187F007B64F8 /* OpenGL */ = {
+			isa = PBXGroup;
+			children = (
+				D772F29D16E93918007B64F8 /* GLKitViewController.h */,
+				D772F29E16E93918007B64F8 /* GLKitViewController.m */,
+			);
+			name = OpenGL;
 			sourceTree = "<group>";
 		};
 		D7922FD116D420A1007D055C /* Detail View */ = {
@@ -242,6 +264,7 @@
 				5DC2FC8A16E6ECB700D8A12F /* Record Video */,
 				D7FC5D0516E13350008A9B50 /* Map View */,
 				D7922FD316D420B2007D055C /* Conway */,
+				D772F28216E9187F007B64F8 /* OpenGL */,
 			);
 			name = "Detail View";
 			sourceTree = "<group>";
@@ -402,6 +425,7 @@
 				D7FC5B4E16DE9073008A9B50 /* ConwayInfoModalViewController.m in Sources */,
 				D7FC5D0916E133A9008A9B50 /* MapViewController.m in Sources */,
 				5DC2FC8E16E6ECFE00D8A12F /* VideoRecorderViewController.m in Sources */,
+				D772F29F16E93918007B64F8 /* GLKitViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,12 +8,14 @@
 
 #import "DetailViewController.h"
 
+#import "Constants.h"
 #import "PhotoManipulationViewController.h"
 #import "CalendarViewController.h"
 #import "BinaryClockViewController.h"
 #import "VideoRecorderViewController.h"
 #import "MapViewController.h"
 #import "ConwayViewController.h"
+#import "GLKitViewController.h"
 
 @interface DetailViewController () {
     
@@ -41,7 +43,7 @@
 
 - (void)setDetailView:(int)selection
 {
-    if (selection == 7)
+    if (selection == NUMBER_OF_ROWS - 1)
     {
         [self showMailerView];
     }
@@ -84,6 +86,11 @@
             case 6:
                 [self.navigationItem setTitle:@"Conway's Game of Life"];
                 selectedViewController = [[ConwayViewController alloc] init];
+                break;
+                
+            case 7:
+                [self.navigationItem setTitle:@"OpenGL ES"];
+                selectedViewController = [[GLKitViewController alloc] init];
                 break;
                 
             default:

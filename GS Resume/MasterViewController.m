@@ -10,6 +10,7 @@
 
 #import "DetailViewController.h"
 #import "UIImage+GradientImage.h"
+#import "Constants.h"
 
 @interface MasterViewController () {
 //    NSMutableArray *_objects;
@@ -76,7 +77,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 8;
+    return NUMBER_OF_ROWS;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -127,10 +128,11 @@
             break;
             
         case 7:
-            cell.textLabel.text = @"📧 Email Developer";
+            cell.textLabel.text = @"💻 OpenGL ES";
             break;
             
         default:
+            cell.textLabel.text = @"📧 Email Developer";
             break;
     }
     
@@ -171,9 +173,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 7)
+    if (indexPath.row == NUMBER_OF_ROWS - 1)
     {
-        [self.detailViewController setDetailView:7];
+        [self.detailViewController setDetailView:NUMBER_OF_ROWS - 1];
     }
     else
     {

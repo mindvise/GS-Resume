@@ -69,10 +69,9 @@
             
             MKCoordinateRegion region;
             MKCoordinateSpan span;
-            span.latitudeDelta=0.2;
-            span.longitudeDelta=0.2;
+            span.latitudeDelta=0.1;
+            span.longitudeDelta=0.1;
             region.span = span;
-            
             
             MapAnnotation *annotation = [[MapAnnotation alloc] init];
             CLPlacemark *placemark = placemarks[0];
@@ -87,7 +86,11 @@
                 annotation.title = @"Searched Address";
             }
             
-            annotation.subtitle = ABCreateStringWithAddressDictionary(placemark.addressDictionary, NO);
+            annotation.subtitle = [NSString stringWithFormat:@"%@, %@, %@ %@", placemark.addressDictionary[@"Street"],
+                                                                               placemark.addressDictionary[@"City"],
+                                                                               placemark.addressDictionary[@"State"],
+                                                                               placemark.addressDictionary[@"ZIP"]];
+            
             region.center = annotation.coordinate;
             
             [mapView addAnnotation:annotation];

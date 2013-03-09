@@ -20,6 +20,8 @@
 @interface DetailViewController () {
     
     UIViewController *selectedViewController;
+    __weak IBOutlet UILabel *homeLabel;
+    __weak IBOutlet UITextView *homeTextView;
 }
 
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -56,6 +58,8 @@
         {
             case 0:
                 [self.navigationItem setTitle:@"Home"];
+                homeLabel.hidden = NO;
+                homeTextView.hidden = NO;
                 break;
                 
             case 1:
@@ -91,6 +95,8 @@
             case 7:
                 [self.navigationItem setTitle:@"OpenGL ES"];
                 selectedViewController = [[GLKitViewController alloc] init];
+                homeLabel.hidden = YES;
+                homeTextView.hidden = YES;
                 break;
                 
             default:

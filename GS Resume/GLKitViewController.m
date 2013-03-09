@@ -10,8 +10,6 @@
 
 #import "GLKitViewController.h"
 
-#import "GLmodel.h"
-
 typedef struct {
     float Position[3];
     float Color[4];
@@ -31,16 +29,58 @@ const GLubyte Indices[] = {
 
 @interface GLKitViewController () {
 
+    float aspect;
     float rotation;
+    float viewCenterX;
+    float viewCenterY;
+    CGPoint point;
     GLuint vertexBuffer;
     GLuint indexBuffer;
     
     GLKBaseEffect *effect;
+    UIPanGestureRecognizer *panRecognizer;
 }
 
 @end
 
 @implementation GLKitViewController
+
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.view = [[GLKView alloc] initWithFrame:CGRectMake(0, 0, 703, 748)];
+    self.view.backgroundColor = [UIColor clearColor];
+    self_glkView().context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
+    
+    aspect = fabsf(self.view.bounds.size.width / self.view.bounds.size.height);
+    viewCenterX = self.view.bounds.size.width/2;
+    viewCenterY = self.view.bounds.size.height/2;
+    
+    self.delegate = self;
+    self.preferredFramesPerSecond = 60;
+
+    point = CGPointMake(0.0f, 0.0f);
+    
+    panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
+    panRecognizer.maximumNumberOfTouches = 1;
+    [self.view addGestureRecognizer:panRecognizer];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self setupGL];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    [self tearDownGL];
+}
 
 - (void)setupGL
 {
@@ -64,31 +104,6 @@ const GLubyte Indices[] = {
     glDeleteBuffers(1, &indexBuffer);
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    
-    self.view = [[GLKView alloc] initWithFrame:CGRectMake(0, 0, 703, 748)];
-    self_glkView().context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
-    
-    self.delegate = self;
-    self.preferredFramesPerSecond = 60;
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-    [self setupGL];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:animated];
-    
-    [self tearDownGL];
-}
-
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect
 {
     glClearColor(0.0, 0.0, 0.0, 0.0);
@@ -109,11 +124,10 @@ const GLubyte Indices[] = {
 
 - (void)glkViewControllerUpdate:(GLKViewController *)controller
 {
-    float aspect = fabsf(self.view.bounds.size.width / self.view.bounds.size.height);
     GLKMatrix4 projectionMatrix = GLKMatrix4MakePerspective(GLKMathDegreesToRadians(65.0f), aspect, 4.0f, 10.0f);
     effect.transform.projectionMatrix = projectionMatrix;
     
-    GLKMatrix4 modelViewMatrix = GLKMatrix4MakeTranslation(0.0f, 0.0f, -6.0f);
+    GLKMatrix4 modelViewMatrix = GLKMatrix4MakeTranslation(point.x, point.y, -4.0f);
     rotation += 1;
     
     if (rotation > 360)
@@ -128,6 +142,15 @@ const GLubyte Indices[] = {
 - (void)render:(CADisplayLink*)displayLink
 {
     [self_glkView() display];
+}
+
+- (void)handlePanGesture:(UIGestureRecognizer *)gestureRecognizer
+{
+    point = [gestureRecognizer locationInView:self.view];
+    
+    point = CGPointMake((point.x - viewCenterX)/self.view.bounds.size.width * 5, -((point.y - viewCenterY)/self.view.bounds.size.height) * 5);
+    
+    //NSLog(@"%f, %f", (point.x - viewCenterX)/self.view.bounds.size.width * 5, -((point.y - viewCenterY)/self.view.bounds.size.height) * 5);
 }
 
 @end

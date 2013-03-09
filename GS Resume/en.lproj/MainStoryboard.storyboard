@@ -72,6 +72,10 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="GS Resume" id="53"/>
+                    <connections>
+                        <outlet property="homeLabel" destination="PXQ-XH-Q1e" id="vNP-wn-NsU"/>
+                        <outlet property="homeTextView" destination="EgA-9D-daF" id="9f2-Vt-Ulv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15" sceneMemberID="firstResponder"/>
             </objects>

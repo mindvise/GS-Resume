@@ -122,7 +122,7 @@
     }
     else
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Cannot Sent Mail"
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Cannot Send Mail"
                                                         message:@"Your device does not support email or Mail app has not been setup."
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"

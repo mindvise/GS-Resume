@@ -55,7 +55,6 @@
         
         camera.wantsFullScreenLayout = YES;
         [self presentViewController:camera animated:YES completion:nil];
-        
     }
     else
     {
@@ -92,7 +91,6 @@
                                                        delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
         alert = nil;
-        
     }
     else
     {
@@ -100,10 +98,12 @@
         recordVideoLabel = nil;
         
         [moviePlayer.view removeFromSuperview];
+        moviePlayer = nil;
         
         moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
-        [moviePlayer prepareToPlay];
+        moviePlayer.shouldAutoplay = NO;
         
+        [moviePlayer prepareToPlay];
         moviePlayer.view.frame = videoContainerView.bounds;
         
         [videoContainerView addSubview:moviePlayer.view];

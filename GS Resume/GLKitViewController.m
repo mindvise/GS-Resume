@@ -21,6 +21,8 @@
     float viewCenterY;
     Square *square;
     UIPanGestureRecognizer *panRecognizer;
+    UIRotationGestureRecognizer *rotateRecognizer;
+    UIPinchGestureRecognizer *pinchRecognizer;
 }
 
 @end
@@ -51,6 +53,12 @@
     panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
     panRecognizer.maximumNumberOfTouches = 1;
     [self.view addGestureRecognizer:panRecognizer];
+    
+    rotateRecognizer = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(handleRotateGesture:)];
+    [self.view addGestureRecognizer:rotateRecognizer];
+    
+    pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinchGesture:)];
+    [self.view addGestureRecognizer:pinchRecognizer];
 }
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect
@@ -63,7 +71,7 @@
 
 - (void)glkViewControllerUpdate:(GLKViewController *)controller
 {
-    [square translateAndRotateSquareWithAspectRation:aspect];
+    [square updateSquareModelWithAspectRatio:aspect];
 }
 
 - (void)render:(CADisplayLink*)displayLink
@@ -71,11 +79,23 @@
     [self_glkView() display];
 }
 
-- (void)handlePanGesture:(UIGestureRecognizer *)gestureRecognizer
+- (void)handlePanGesture:(UIPanGestureRecognizer *)gestureRecognizer
 {
     CGPoint point = [gestureRecognizer locationInView:self.view];
     
     square.point = CGPointMake((point.x - viewCenterX)/VIEW_WIDTH * 4.7f, -((point.y - viewCenterY)/VIEW_HEIGHT) * 5.0f);
+}
+
+- (void)handleRotateGesture:(UIRotationGestureRecognizer *)gestureRecognizer
+{
+    square.rotation += -gestureRecognizer.rotation * fabsf(gestureRecognizer.velocity);
+}
+
+- (void)handlePinchGesture:(UIPinchGestureRecognizer *)gestureRecognizer
+{
+    square.scale += gestureRecognizer.scale * gestureRecognizer.velocity / 100;
+    
+    NSLog(@"scale: %f", square.scale);
 }
 
 - (void)dealloc

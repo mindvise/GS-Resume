@@ -20,7 +20,6 @@ typedef struct {
     GLuint vertexBuffer;
     GLuint indexBuffer;
     GLKBaseEffect *effect;
-    float rotation;
 }
 
 @end
@@ -43,6 +42,10 @@ typedef struct {
         
         indices[0] = 0;  indices[1] = 1;  indices[2] = 2;
         indices[3] = 2;  indices[4] = 3;  indices[5] = 0;
+        
+        _point = CGPointMake(0.0f, 0.0f);
+        _rotation = 0.0f;
+        _scale = 1.0f;
         
         effect = [[GLKBaseEffect alloc] init];
     }
@@ -79,23 +82,38 @@ typedef struct {
     glEnableVertexAttribArray(GLKVertexAttribColor);
     glVertexAttribPointer(GLKVertexAttribColor, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), (const GLvoid *) offsetof(Vertex, color));
     
-    glDrawElements(GL_TRIANGLES, sizeof(indices)/sizeof(indices[0]), GL_UNSIGNED_BYTE, 0);
+    glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_BYTE, 0);
 }
 
-- (void)translateAndRotateSquareWithAspectRation:(float)aspect
+- (void)updateSquareModelWithAspectRatio:(float)aspect
 {
     GLKMatrix4 projectionMatrix = GLKMatrix4MakePerspective(GLKMathDegreesToRadians(65.0f), aspect, 4.0f, 10.0f);
     effect.transform.projectionMatrix = projectionMatrix;
     
     GLKMatrix4 modelViewMatrix = GLKMatrix4MakeTranslation(_point.x, _point.y, -4.0f);
-    rotation += 1;
     
-    if (rotation > 360)
+    if (_rotation > 360)
     {
-        rotation -= 360;
+        _rotation -= 360;
+    }
+    else if (_rotation < -360)
+    {
+        _rotation += 360;
     }
     
-    modelViewMatrix = GLKMatrix4Rotate(modelViewMatrix, GLKMathDegreesToRadians(rotation), 0.0f, 0.0f, 1.0f);
+    modelViewMatrix = GLKMatrix4Rotate(modelViewMatrix, GLKMathDegreesToRadians(_rotation), 0.0f, 0.0f, 1.0f);
+    
+    if (_scale < 0.5f)
+    {
+        _scale = 0.5f;
+    }
+    else if (_scale > 2.0f)
+    {
+        _scale = 2.0f;
+    }
+    
+    modelViewMatrix = GLKMatrix4Scale(modelViewMatrix, _scale, _scale, 0.0f);
+    
     effect.transform.modelviewMatrix = modelViewMatrix;
 }
 

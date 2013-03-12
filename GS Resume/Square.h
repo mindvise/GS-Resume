@@ -11,11 +11,13 @@
 
 @interface Square : NSObject
 
-@property (nonatomic) CGPoint point;
+@property CGPoint point;
+@property CGFloat rotation;
+@property CGFloat scale;
 
 - (void)createBuffers;
 - (void)deleteBuffers;
 - (void)drawSquareWithView:(GLKView *)view inRect:(CGRect)rect;
-- (void)translateAndRotateSquareWithAspectRation:(float)aspect;
+- (void)updateSquareModelWithAspectRatio:(float)aspect;
 
 @end

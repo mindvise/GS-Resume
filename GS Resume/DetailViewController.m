@@ -116,7 +116,7 @@
         MFMailComposeViewController *mailer = [[MFMailComposeViewController alloc] init];
         
         mailer.mailComposeDelegate = self;
-        [mailer setToRecipients:@[@"gs.dev@hotmail.com"]];
+        [mailer setToRecipients:@[@"gs.dev@outlook.com"]];
         
         [self presentViewController:mailer animated:YES completion:nil];
     }

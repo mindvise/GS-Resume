@@ -13,15 +13,12 @@
     
     UIImage *image;
     __weak IBOutlet UIImageView *imageView;
-    __weak IBOutlet UIButton *imageButton;
     __weak IBOutlet UILabel *takePhotoLabel;
     
     UIPopoverController *filterPopover;
+    UITapGestureRecognizer *tapRecognizer;
 }
 
-
-- (IBAction)takePicturePressed:(UIBarButtonItem *)sender;
-- (IBAction)imageButtonPressed:(UIButton *)sender;
 
 @end
 
@@ -39,6 +36,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageTapped)];
+    [imageView addGestureRecognizer:tapRecognizer];
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,7 +58,6 @@
         camera.allowsEditing = YES;
         camera.showsCameraControls = YES;
         
-        camera.wantsFullScreenLayout = YES;
         [self presentViewController:camera animated:YES completion:nil];
     }
     else
@@ -70,7 +69,7 @@
     }
 }
 
-- (IBAction)imageButtonPressed:(UIButton *)sender
+- (void)imageTapped
 {
     if (imageView.image != nil)
     {
@@ -84,8 +83,7 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    [takePhotoLabel removeFromSuperview];
-    takePhotoLabel = nil;
+    takePhotoLabel.hidden = YES;
     
     image = [info objectForKey:UIImagePickerControllerEditedImage];
     imageView.image = image;

@@ -2,13 +2,18 @@
 //  OpenGLViewController.m
 //  GS Resume
 //
-//  Created by Greg S on 3/7/13.
+//  Created by Greg S on 3/14/13.
 //  Copyright (c) 2013 Shobe. All rights reserved.
 //
 
 #import "OpenGLViewController.h"
 
-@interface OpenGLViewController ()
+#import "GLKitViewController.h"
+
+@interface OpenGLViewController () {
+    
+    GLKitViewController *glKitViewController;
+}
 
 @end
 
@@ -26,13 +31,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    glKitViewController = [[GLKitViewController alloc] init];
+    
+    [self.view addSubview:glKitViewController.view];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)cleanUpContext
+{
+    [glKitViewController cleanUpContext];
 }
 
 @end

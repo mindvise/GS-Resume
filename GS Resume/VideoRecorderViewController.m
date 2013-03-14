@@ -10,7 +10,6 @@
 
 @interface VideoRecorderViewController () {
     
-    NSURL *movieURL;
     MPMoviePlayerController *moviePlayer;
     __weak IBOutlet UIView *videoContainerView;
     __weak IBOutlet UILabel *recordVideoLabel;
@@ -32,7 +31,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    moviePlayer = [[MPMoviePlayerController alloc] init];
+    moviePlayer.view.backgroundColor = [UIColor clearColor];
+    moviePlayer.shouldAutoplay = NO;
+    moviePlayer.view.frame = CGRectMake(0, 86, 703, 502);
+    [self.view addSubview:moviePlayer.view];
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,7 +57,6 @@
         camera.allowsEditing = NO;
         camera.delegate = self;
         
-        camera.wantsFullScreenLayout = YES;
         [self presentViewController:camera animated:YES completion:nil];
     }
     else
@@ -69,18 +72,20 @@
 {
     NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
     
-    [self dismissViewControllerAnimated:YES completion:nil];
+    __weak VideoRecorderViewController *selfRef = self;
     
-    if (CFStringCompare ((__bridge_retained CFStringRef) mediaType, kUTTypeMovie, 0) == kCFCompareEqualTo)
-    {
-        movieURL = [info objectForKey:UIImagePickerControllerMediaURL];
-        NSString *moviePath = [[info objectForKey:UIImagePickerControllerMediaURL] path];
+    [self dismissViewControllerAnimated:YES completion:^{
         
-        if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(moviePath))
+        if (CFStringCompare ((__bridge_retained CFStringRef) mediaType, kUTTypeMovie, 0) == kCFCompareEqualTo)
         {
-            UISaveVideoAtPathToSavedPhotosAlbum(moviePath, self, @selector(video:didFinishSavingWithError:contextInfo:), nil);
+            NSString *moviePath = [[info objectForKey:UIImagePickerControllerMediaURL] path];
+            
+            if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(moviePath))
+            {
+                UISaveVideoAtPathToSavedPhotosAlbum(moviePath, selfRef, @selector(video:didFinishSavingWithError:contextInfo:), nil);
+            }
         }
-    }
+    }];
 }
 
 -(void)video:(NSString*)videoPath didFinishSavingWithError:(NSError*)error contextInfo:(void*)contextInfo
@@ -94,21 +99,15 @@
     }
     else
     {
-        [recordVideoLabel removeFromSuperview];
-        recordVideoLabel = nil;
+        recordVideoLabel.hidden = YES;
         
-        [moviePlayer.view removeFromSuperview];
-        moviePlayer = nil;
-        
-        moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:movieURL];
-        moviePlayer.shouldAutoplay = NO;
+        moviePlayer.view.backgroundColor = [UIColor blackColor];
+        moviePlayer.movieSourceType = MPMovieSourceTypeFile;
+        moviePlayer.contentURL = [[NSURL alloc] initFileURLWithPath:videoPath];
         
         [moviePlayer prepareToPlay];
-        moviePlayer.view.frame = videoContainerView.bounds;
         
-        [videoContainerView addSubview:moviePlayer.view];
-        
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Saved To Camera Roll" message:@""
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Saved Video To Camera Roll" message:@""
                                                        delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
         alert = nil;

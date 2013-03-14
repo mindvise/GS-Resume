@@ -88,17 +88,15 @@
 
 - (void)handleRotateGesture:(UIRotationGestureRecognizer *)gestureRecognizer
 {
-    square.rotation += -gestureRecognizer.rotation * fabsf(gestureRecognizer.velocity);
+    square.rotation += -gestureRecognizer.velocity;
 }
 
 - (void)handlePinchGesture:(UIPinchGestureRecognizer *)gestureRecognizer
 {
-    square.scale += gestureRecognizer.scale * gestureRecognizer.velocity / 100;
-    
-    NSLog(@"scale: %f", square.scale);
+    square.scale += gestureRecognizer.velocity/90;
 }
 
-- (void)dealloc
+- (void)cleanUpContext
 {
     [square deleteBuffers];
     

@@ -15,11 +15,11 @@
 #import "VideoRecorderViewController.h"
 #import "MapViewController.h"
 #import "ConwayViewController.h"
-#import "GLKitViewController.h"
+//#import "GLKitViewController.h"
+#import "OpenGLViewController.h"
 
 @interface DetailViewController () {
-    
-    UIViewController *selectedViewController;
+
     __weak IBOutlet UILabel *homeLabel;
     __weak IBOutlet UITextView *homeTextView;
 }
@@ -32,7 +32,9 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];	
+    [super viewDidLoad];
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered target:nil action:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,59 +53,55 @@
     }
     else
     {
-        [selectedViewController.view removeFromSuperview];
-        selectedViewController = nil;
+        if (self.navigationController.viewControllers.count > 1)
+        {
+            __weak UIViewController *viewController = self.navigationController.viewControllers[1];
+            
+            if ([viewController respondsToSelector:@selector(cleanUpContext)])
+            {
+                [viewController performSelector:@selector(cleanUpContext)];
+            }
+            
+            [self.navigationController popViewControllerAnimated:NO];
+        }
         
         switch (selection)
         {
             case 0:
-                [self.navigationItem setTitle:@"Home"];
-                homeLabel.hidden = NO;
-                homeTextView.hidden = NO;
                 break;
                 
             case 1:
-                [self.navigationItem setTitle:@"Photo Manipulation"];
-                selectedViewController = [[PhotoManipulationViewController alloc] init];
+                [self.navigationController pushViewController:[[PhotoManipulationViewController alloc] init] animated:NO];
                 break;
                 
             case 2:
-                [self.navigationItem setTitle:@"Calendar"];
-                selectedViewController = [[CalendarViewController alloc] init];
+                [self.navigationController pushViewController:[[CalendarViewController alloc] init] animated:NO];
                 break;
                 
             case 3:
-                [self.navigationItem setTitle:@"Binary Clock"];
-                selectedViewController = [[BinaryClockViewController alloc] init];
+                [self.navigationController pushViewController:[[BinaryClockViewController alloc] init] animated:NO];
                 break;
                 
             case 4:
-                [self.navigationItem setTitle:@"Video Record"];
-                selectedViewController = [[VideoRecorderViewController alloc] init];
+                [self.navigationController pushViewController:[[VideoRecorderViewController alloc] init] animated:NO];
                 break;
                 
             case 5:
-                [self.navigationItem setTitle:@"Find Address"];
-                selectedViewController = [[MapViewController alloc] init];
+                [self.navigationController pushViewController:[[MapViewController alloc] init] animated:NO];
                 break;
                 
             case 6:
-                [self.navigationItem setTitle:@"Conway's Game of Life"];
-                selectedViewController = [[ConwayViewController alloc] init];
+                [self.navigationController pushViewController:[[ConwayViewController alloc] init] animated:NO];
                 break;
                 
             case 7:
-                [self.navigationItem setTitle:@"OpenGL ES"];
-                selectedViewController = [[GLKitViewController alloc] init];
-                homeLabel.hidden = YES;
-                homeTextView.hidden = YES;
+                //[self.navigationController pushViewController:[[GLKitViewController alloc] init] animated:NO];
+                [self.navigationController pushViewController:[[OpenGLViewController alloc] init] animated:NO];
                 break;
                 
             default:
                 break;
         }
-        
-        [self.view addSubview:selectedViewController.view];
     }
 }
 

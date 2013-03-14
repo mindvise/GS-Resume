@@ -29,6 +29,8 @@
 		D70CC95016D3FD5500E22ECC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D70CC94F16D3FD5500E22ECC /* DetailViewController.m */; };
 		D70CC95D16D3FEAF00E22ECC /* UIImage+GradientImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D70CC95C16D3FEAF00E22ECC /* UIImage+GradientImage.m */; };
 		D70CC95F16D401B900E22ECC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D70CC95E16D401B900E22ECC /* QuartzCore.framework */; };
+		D76C0C6016F28BE10043F75F /* OpenGLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D76C0C5E16F28BE10043F75F /* OpenGLViewController.m */; };
+		D76C0C6116F28BE10043F75F /* OpenGLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D76C0C5F16F28BE10043F75F /* OpenGLViewController.xib */; };
 		D772F28A16E91BD8007B64F8 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D772F28916E91BD8007B64F8 /* GLKit.framework */; };
 		D772F28C16E91BE1007B64F8 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D772F28B16E91BE1007B64F8 /* OpenGLES.framework */; };
 		D772F29F16E93918007B64F8 /* GLKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D772F29E16E93918007B64F8 /* GLKitViewController.m */; };
@@ -90,6 +92,9 @@
 		D70CC95B16D3FEAF00E22ECC /* UIImage+GradientImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GradientImage.h"; sourceTree = "<group>"; };
 		D70CC95C16D3FEAF00E22ECC /* UIImage+GradientImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GradientImage.m"; sourceTree = "<group>"; };
 		D70CC95E16D401B900E22ECC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D76C0C5D16F28BE10043F75F /* OpenGLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLViewController.h; sourceTree = "<group>"; };
+		D76C0C5E16F28BE10043F75F /* OpenGLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLViewController.m; sourceTree = "<group>"; };
+		D76C0C5F16F28BE10043F75F /* OpenGLViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpenGLViewController.xib; sourceTree = "<group>"; };
 		D772F28916E91BD8007B64F8 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		D772F28B16E91BE1007B64F8 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		D772F28D16E92230007B64F8 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Constants.h; path = ../Constants.h; sourceTree = "<group>"; };
@@ -250,6 +255,9 @@
 		D772F28216E9187F007B64F8 /* OpenGL */ = {
 			isa = PBXGroup;
 			children = (
+				D76C0C5D16F28BE10043F75F /* OpenGLViewController.h */,
+				D76C0C5E16F28BE10043F75F /* OpenGLViewController.m */,
+				D76C0C5F16F28BE10043F75F /* OpenGLViewController.xib */,
 				D772F29D16E93918007B64F8 /* GLKitViewController.h */,
 				D772F29E16E93918007B64F8 /* GLKitViewController.m */,
 				D772F2B116EE4466007B64F8 /* Square.h */,
@@ -406,6 +414,7 @@
 				D7FC5B4F16DE9073008A9B50 /* ConwayInfoModalViewController.xib in Resources */,
 				D7FC5D0A16E133A9008A9B50 /* MapViewController.xib in Resources */,
 				5DC2FC8F16E6ECFE00D8A12F /* VideoRecorderViewController.xib in Resources */,
+				D76C0C6116F28BE10043F75F /* OpenGLViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +441,7 @@
 				5DC2FC8E16E6ECFE00D8A12F /* VideoRecorderViewController.m in Sources */,
 				D772F29F16E93918007B64F8 /* GLKitViewController.m in Sources */,
 				D772F2B316EE4466007B64F8 /* Square.m in Sources */,
+				D76C0C6016F28BE10043F75F /* OpenGLViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

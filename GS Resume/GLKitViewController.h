@@ -11,4 +11,6 @@
 
 @interface GLKitViewController : GLKViewController <GLKViewDelegate, GLKViewControllerDelegate>
 
+- (void)cleanUpContext;
+
 @end

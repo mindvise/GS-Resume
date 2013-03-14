@@ -116,7 +116,7 @@
             break;
             
         case 4:
-            cell.textLabel.text = @"📹 Video Record";
+            cell.textLabel.text = @"📹 Record Video";
             break;
             
         case 5:

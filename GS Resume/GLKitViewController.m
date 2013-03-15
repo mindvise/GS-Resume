@@ -7,8 +7,9 @@
 //
 
 #define self_glkView() ((GLKView*)self.view)
-#define VIEW_WIDTH 703.0f
-#define VIEW_HEIGHT 748.0f
+
+const float VIEW_WIDTH = 703.0f;
+const float VIEW_HEIGHT = 748.0f;
 
 #import "GLKitViewController.h"
 

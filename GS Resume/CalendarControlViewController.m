@@ -7,11 +7,11 @@
 //
 
 //Macros for common date formats
-#define dateMMMMDDYYYY() [NSString stringWithFormat:@"%@ %d, %@", self.monthLabel.text, self.selectedDay, self.yearLabel.text]
-#define dateDDMMMMYYYY() [NSString stringWithFormat:@"%d %@, %@", self.selectedDay, self.monthLabel.text, self.yearLabel.text]
+//#define dateMMMMDDYYYY() [NSString stringWithFormat:@"%@ %d, %@", self.monthLabel.text, self.selectedDay, self.yearLabel.text]
+//#define dateDDMMMMYYYY() [NSString stringWithFormat:@"%d %@, %@", self.selectedDay, self.monthLabel.text, self.yearLabel.text]
 #define dateMMDDYYYY() [NSString stringWithFormat:@"%d/%d/%d", self.monthLabel.tag, self.selectedDay, self.yearLabel.tag]
-#define dateDDMMYYYY() [NSString stringWithFormat:@"%d/%d/%d", self.selectedDay, self.monthLabel.tag, self.yearLabel.tag]
-#define dateYYYYMMDD() [NSString stringWithFormat:@"%d%d%d", self.yearLabel.tag, self.monthLabel.tag, self.selectedDay]
+//#define dateDDMMYYYY() [NSString stringWithFormat:@"%d/%d/%d", self.selectedDay, self.monthLabel.tag, self.yearLabel.tag]
+//#define dateYYYYMMDD() [NSString stringWithFormat:@"%d%d%d", self.yearLabel.tag, self.monthLabel.tag, self.selectedDay]
 
 #import "CalendarControlViewController.h"
 

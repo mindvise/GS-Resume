@@ -36,6 +36,8 @@
 		D7922FD716D420D8007D055C /* ConwayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7922FD516D420D8007D055C /* ConwayViewController.m */; };
 		D7922FD816D420D8007D055C /* ConwayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7922FD616D420D8007D055C /* ConwayViewController.xib */; };
 		D7922FDE16D42567007D055C /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7922FDD16D42567007D055C /* CellView.xib */; };
+		D7B8C12916F3C5AC006FBC0E /* Vertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = D7B8C12816F3C5AC006FBC0E /* Vertex.glsl */; };
+		D7B8C12B16F3C64F006FBC0E /* Fragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = D7B8C12A16F3C64F006FBC0E /* Fragment.glsl */; };
 		D7CAB14016D55EAC00C65E47 /* PhotoManipulationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7CAB13E16D55EAC00C65E47 /* PhotoManipulationViewController.m */; };
 		D7CAB14116D55EAC00C65E47 /* PhotoManipulationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7CAB13F16D55EAC00C65E47 /* PhotoManipulationViewController.xib */; };
 		D7CAB14A16D57B5400C65E47 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7CAB14816D57B5400C65E47 /* CalendarViewController.m */; };
@@ -101,6 +103,8 @@
 		D7922FD516D420D8007D055C /* ConwayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConwayViewController.m; sourceTree = "<group>"; };
 		D7922FD616D420D8007D055C /* ConwayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConwayViewController.xib; sourceTree = "<group>"; };
 		D7922FDD16D42567007D055C /* CellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellView.xib; sourceTree = "<group>"; };
+		D7B8C12816F3C5AC006FBC0E /* Vertex.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Vertex.glsl; sourceTree = "<group>"; };
+		D7B8C12A16F3C64F006FBC0E /* Fragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Fragment.glsl; sourceTree = "<group>"; };
 		D7CAB13D16D55EAC00C65E47 /* PhotoManipulationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoManipulationViewController.h; sourceTree = "<group>"; };
 		D7CAB13E16D55EAC00C65E47 /* PhotoManipulationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoManipulationViewController.m; sourceTree = "<group>"; };
 		D7CAB13F16D55EAC00C65E47 /* PhotoManipulationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoManipulationViewController.xib; sourceTree = "<group>"; };
@@ -254,6 +258,8 @@
 				D772F29E16E93918007B64F8 /* GLKitViewController.m */,
 				D772F2B116EE4466007B64F8 /* Square.h */,
 				D772F2B216EE4466007B64F8 /* Square.m */,
+				D7B8C12816F3C5AC006FBC0E /* Vertex.glsl */,
+				D7B8C12A16F3C64F006FBC0E /* Fragment.glsl */,
 			);
 			name = OpenGL;
 			sourceTree = "<group>";
@@ -406,6 +412,8 @@
 				D7FC5B4F16DE9073008A9B50 /* ConwayInfoModalViewController.xib in Resources */,
 				D7FC5D0A16E133A9008A9B50 /* MapViewController.xib in Resources */,
 				5DC2FC8F16E6ECFE00D8A12F /* VideoRecorderViewController.xib in Resources */,
+				D7B8C12916F3C5AC006FBC0E /* Vertex.glsl in Resources */,
+				D7B8C12B16F3C64F006FBC0E /* Fragment.glsl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,8 +15,7 @@
 #import "VideoRecorderViewController.h"
 #import "MapViewController.h"
 #import "ConwayViewController.h"
-//#import "GLKitViewController.h"
-#import "OpenGLViewController.h"
+#import "GLKitViewController.h"
 
 @interface DetailViewController () {
 
@@ -55,21 +54,11 @@
     {
         if (self.navigationController.viewControllers.count > 1)
         {
-            __weak UIViewController *viewController = self.navigationController.viewControllers[1];
-            
-            if ([viewController respondsToSelector:@selector(cleanUpContext)])
-            {
-                [viewController performSelector:@selector(cleanUpContext)];
-            }
-            
             [self.navigationController popViewControllerAnimated:NO];
         }
         
         switch (selection)
         {
-            case 0:
-                break;
-                
             case 1:
                 [self.navigationController pushViewController:[[PhotoManipulationViewController alloc] init] animated:NO];
                 break;
@@ -95,8 +84,7 @@
                 break;
                 
             case 7:
-                //[self.navigationController pushViewController:[[GLKitViewController alloc] init] animated:NO];
-                [self.navigationController pushViewController:[[OpenGLViewController alloc] init] animated:NO];
+                [self.navigationController pushViewController:[[GLKitViewController alloc] init] animated:NO];
                 break;
                 
             default:

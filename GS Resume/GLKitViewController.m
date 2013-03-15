@@ -40,24 +40,24 @@
     
     [EAGLContext setCurrentContext:self_glkView().context];
     
-    square = [[Square alloc] init];
+    square = [[[Square alloc] init] retain];
     [square createBuffers];
     
-    aspect = fabsf(VIEW_WIDTH / VIEW_HEIGHT);
-    viewCenterX = VIEW_WIDTH/2.0f;
+    aspect = VIEW_WIDTH / VIEW_HEIGHT;
+    viewCenterX = VIEW_WIDTH / 2.0f;
     viewCenterY = self.view.bounds.size.height/2.0f;
     
     self.delegate = self;
     self.preferredFramesPerSecond = 60;
     
-    panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
+    panRecognizer = [[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)] retain];
     panRecognizer.maximumNumberOfTouches = 1;
     [self.view addGestureRecognizer:panRecognizer];
     
-    rotateRecognizer = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(handleRotateGesture:)];
+    rotateRecognizer = [[[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(handleRotateGesture:)] retain];
     [self.view addGestureRecognizer:rotateRecognizer];
     
-    pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinchGesture:)];
+    pinchRecognizer = [[[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinchGesture:)] retain];
     [self.view addGestureRecognizer:pinchRecognizer];
 }
 
@@ -96,11 +96,16 @@
     square.scale += gestureRecognizer.velocity/90;
 }
 
-- (void)cleanUpContext
+- (void)dealloc
 {
     [square deleteBuffers];
     
-    self.view = nil;
+    [square release], square = nil;
+    [panRecognizer release], panRecognizer = nil;
+    [rotateRecognizer release], rotateRecognizer = nil;
+    [pinchRecognizer release], pinchRecognizer = nil;
+    
+    [super dealloc];
     
     [EAGLContext setCurrentContext:nil];
 }

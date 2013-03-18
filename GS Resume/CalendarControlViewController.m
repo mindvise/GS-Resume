@@ -21,6 +21,25 @@ NSString* const monthNamesArray[] = {
     @"January",@"February",@"March",@"April",@"May",@"June",@"July",@"August",@"September",@"October",@"November",@"December"
 };
 
+@interface CalendarControlViewController() {
+    
+    short int firstDayOffset;
+    short int daysInMonth;
+    short int calendarSize;
+    short int heightChange;
+    BOOL isPopoverContentViewController;
+    
+    UIColor *dayColor;
+    UIColor *todayColor;
+    UIColor *selectedColor;
+    UIColor *nondayColor;
+    
+    id callbackTarget;
+    SEL callbackSelector;
+}
+
+@end
+
 @implementation CalendarControlViewController
 
 

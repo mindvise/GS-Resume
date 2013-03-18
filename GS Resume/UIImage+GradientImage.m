@@ -24,6 +24,8 @@
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
+    gradient = nil;
+    
     return image;
 }
 

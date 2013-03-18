@@ -75,7 +75,7 @@
 {
     [super viewWillDisappear:animated];
     
-    [self startClock12Hour];
+    [self stopClock12Hour];
 }
 
 - (void)didReceiveMemoryWarning
@@ -385,7 +385,7 @@
     [self setTime12Hour];
     
     timer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(adjustTime12Hour) userInfo:nil repeats:YES];
-    [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
+    [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
 }
 
 - (void)stopClock12Hour

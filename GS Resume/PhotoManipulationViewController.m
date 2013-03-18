@@ -105,9 +105,9 @@
         
         CIContext *context = [CIContext contextWithOptions:nil];
         
-        CGImageRef cgImage = [context createCGImage:filter.outputImage fromRect:[filter.outputImage extent]];
-        
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            
+            CGImageRef cgImage = [context createCGImage:filter.outputImage fromRect:[filter.outputImage extent]];
             
             imageView.image = [UIImage imageWithCGImage:cgImage];
             

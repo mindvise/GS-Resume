@@ -76,7 +76,7 @@
     
     [self dismissViewControllerAnimated:YES completion:^{
         
-        if (CFStringCompare ((__bridge_retained CFStringRef) mediaType, kUTTypeMovie, 0) == kCFCompareEqualTo)
+        if (CFStringCompare((__bridge CFStringRef)(mediaType), kUTTypeMovie, 0) == kCFCompareEqualTo)
         {
             NSString *moviePath = [[info objectForKey:UIImagePickerControllerMediaURL] path];
             

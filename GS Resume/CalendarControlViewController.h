@@ -14,28 +14,13 @@
 #import <UIKit/UIKit.h>
 
 
-@interface CalendarControlViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout> {
-    
-    short int firstDayOffset;
-    short int daysInMonth;
-    short int calendarSize;
-    short int heightChange;
-    BOOL isPopoverContentViewController;
-    
-    UIColor *dayColor;
-    UIColor *todayColor;
-    UIColor *selectedColor;
-    UIColor *nondayColor;
-    
-    id callbackTarget;
-    SEL callbackSelector;
-}
+@interface CalendarControlViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout> 
 
 @property (weak, nonatomic) IBOutlet UILabel *yearLabel;
 @property (weak, nonatomic) IBOutlet UILabel *monthLabel;
 @property (weak, nonatomic) IBOutlet UICollectionView *calendarCollectionView;
 @property (strong, nonatomic) NSDateComponents *todayDate;
-@property short int selectedDay;
+@property (assign, nonatomic) short int selectedDay;
 
 - (id)initWithTarget:(id)target andSelector:(SEL)selector asPopoverContentViewController:(BOOL)isContentViewController;
 

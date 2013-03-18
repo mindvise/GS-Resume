@@ -17,7 +17,6 @@
 @interface CalendarControlViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout> {
     
     short int firstDayOffset;
-    NSArray *monthNamesArray;
     short int daysInMonth;
     short int calendarSize;
     short int heightChange;

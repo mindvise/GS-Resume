@@ -9,6 +9,6 @@
 #ifndef GS_Resume_Constants_h
 #define GS_Resume_Constants_h
 
-const int NUMBER_OF_ROWS = 9;
+static const int NUMBER_OF_ROWS = 9;
 
 #endif

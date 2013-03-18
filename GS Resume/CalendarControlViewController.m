@@ -17,6 +17,10 @@
 
 const short int OffsetCalArray[] = {0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4};
 
+NSString* const monthNamesArray[] = {
+    @"January",@"February",@"March",@"April",@"May",@"June",@"July",@"August",@"September",@"October",@"November",@"December"
+};
+
 @implementation CalendarControlViewController
 
 
@@ -64,8 +68,6 @@ const short int OffsetCalArray[] = {0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4};
     //Get day, month, and year of current date.
     self.todayDate = [[NSCalendar currentCalendar] components:NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit
                                                  fromDate:[NSDate date]];
-    
-    monthNamesArray = @[@"January",@"February",@"March",@"April",@"May",@"June",@"July",@"August",@"September",@"October",@"November",@"December"];
     
     //Calendar loads with current date as default selection.
     self.selectedDay = self.todayDate.day;

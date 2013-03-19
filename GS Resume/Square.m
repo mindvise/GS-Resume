@@ -90,29 +90,29 @@ typedef struct {
     GLKMatrix4 projectionMatrix = GLKMatrix4MakePerspective(GLKMathDegreesToRadians(65.0f), aspect, 4.0f, 10.0f);
     effect.transform.projectionMatrix = projectionMatrix;
     
-    GLKMatrix4 modelViewMatrix = GLKMatrix4MakeTranslation(_point.x, _point.y, -4.0f);
+    GLKMatrix4 modelViewMatrix = GLKMatrix4MakeTranslation(self.point.x, self.point.y, -4.0f);
     
-    if (_rotation > 360)
+    if (self.rotation > 360)
     {
-        _rotation -= 360;
+        self.rotation -= 360;
     }
-    else if (_rotation < -360)
+    else if (self.rotation < -360)
     {
-        _rotation += 360;
-    }
-    
-    modelViewMatrix = GLKMatrix4Rotate(modelViewMatrix, GLKMathDegreesToRadians(_rotation), 0.0f, 0.0f, 1.0f);
-    
-    if (_scale < 0.5f)
-    {
-        _scale = 0.5f;
-    }
-    else if (_scale > 2.0f)
-    {
-        _scale = 2.0f;
+        self.rotation += 360;
     }
     
-    modelViewMatrix = GLKMatrix4Scale(modelViewMatrix, _scale, _scale, 0.0f);
+    modelViewMatrix = GLKMatrix4Rotate(modelViewMatrix, GLKMathDegreesToRadians(self.rotation), 0.0f, 0.0f, 1.0f);
+    
+    if (self.scale < 0.5f)
+    {
+        self.scale = 0.5f;
+    }
+    else if (self.scale > 2.0f)
+    {
+        self.scale = 2.0f;
+    }
+    
+    modelViewMatrix = GLKMatrix4Scale(modelViewMatrix, self.scale, self.scale, 0.0f);
     
     effect.transform.modelviewMatrix = modelViewMatrix;
 }

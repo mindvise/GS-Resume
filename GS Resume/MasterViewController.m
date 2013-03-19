@@ -35,15 +35,37 @@
     
     selectedRow = 0;
     
-    cellColor = [UIColor colorWithPatternImage:[UIImage gradientImageWithFame:CGRectMake(0, 0, 320, 44) andColorArray:@[
+//    cellColor = [UIColor colorWithPatternImage:[UIImage gradientImageWithFame:CGRectMake(0, 0, 320, 44) andColorArray:@[
+//                                                (id)[UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:1.0f].CGColor,
+//                                                (id)[UIColor colorWithRed:0.2f green:0.2f blue:0.2f alpha:1.0f].CGColor,
+//                                                (id)[UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:1.0f].CGColor]]];
+    
+//    highlightColor = [UIColor colorWithPatternImage:[UIImage gradientImageWithFame:CGRectMake(0, 0, 320, 44) andColorArray:@[
+//                                                     (id)[UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:1.0f].CGColor,
+//                                                     (id)[UIColor colorWithRed:0.55f green:0.65f blue:0.95f alpha:1.0f].CGColor,
+//                                                     (id)[UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:1.0f].CGColor]]];
+    
+    CGFloat locations[4];
+    locations[0] = 0.0f;
+    locations[1] = 0.3f;
+    locations[2] = 0.4f;
+    locations[3] = 0.97f;
+    
+    cellColor = [UIColor colorWithPatternImage:[UIImage gradientImageWithSize:CGSizeMake(320, 44)
+                                                                     andColorArray:@[
                                                 (id)[UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:1.0f].CGColor,
                                                 (id)[UIColor colorWithRed:0.2f green:0.2f blue:0.2f alpha:1.0f].CGColor,
-                                                (id)[UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:1.0f].CGColor]]];
+                                                (id)[UIColor colorWithRed:0.2f green:0.2f blue:0.2f alpha:1.0f].CGColor,
+                                                (id)[UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:1.0f].CGColor]
+                                                                withColorLocations:locations]];
     
-    highlightColor = [UIColor colorWithPatternImage:[UIImage gradientImageWithFame:CGRectMake(0, 0, 320, 44) andColorArray:@[
-                                                     (id)[UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:1.0f].CGColor,
-                                                     (id)[UIColor colorWithRed:0.55f green:0.65f blue:0.95f alpha:1.0f].CGColor,
-                                                     (id)[UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:1.0f].CGColor]]];
+    highlightColor = [UIColor colorWithPatternImage:[UIImage gradientImageWithSize:CGSizeMake(320, 44)
+                                                                     andColorArray:@[
+                                                     (id)[UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:1.0f].CGColor,                                                 
+                                                     (id)[UIColor colorWithRed:0.6f green:0.7f blue:1.0f alpha:1.0f].CGColor,
+                                                     (id)[UIColor colorWithRed:0.5f green:0.6f blue:0.9f alpha:1.0f].CGColor,
+                                                     (id)[UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:1.0f].CGColor]
+                                                                withColorLocations:locations]];
     
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
@@ -73,7 +95,7 @@
     if (indexPath.row == selectedRow)
     {
         cell.textLabel.textColor = [UIColor blackColor];
-        cell.textLabel.shadowColor = [UIColor lightGrayColor];
+        cell.textLabel.shadowColor = [UIColor clearColor];
         cell.contentView.backgroundColor = highlightColor;
     }
     else

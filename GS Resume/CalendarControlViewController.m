@@ -85,14 +85,14 @@ NSString* const monthNamesArray[] = {
     self.contentSizeForViewInPopover = self.view.frame.size;
     
     //Get day, month, and year of current date.
-    self.todayDate = [[NSCalendar currentCalendar] components:NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit
+    _todayDate = [[NSCalendar currentCalendar] components:NSDayCalendarUnit | NSMonthCalendarUnit | NSYearCalendarUnit
                                                  fromDate:[NSDate date]];
     
     //Calendar loads with current date as default selection.
-    self.selectedDay = self.todayDate.day;
-    self.monthLabel.tag = self.todayDate.month;
-    self.yearLabel.text = [NSString stringWithFormat:@"%d", self.todayDate.year];
-    self.yearLabel.tag = self.todayDate.year;
+    _selectedDay = self.todayDate.day;
+    _monthLabel.tag = self.todayDate.month;
+    _yearLabel.text = [NSString stringWithFormat:@"%d", self.todayDate.year];
+    _yearLabel.tag = self.todayDate.year;
     
     calendarSize = 35;
     

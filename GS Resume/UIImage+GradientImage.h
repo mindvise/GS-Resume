@@ -12,5 +12,6 @@
 @interface UIImage (GradientImage)
 
 + (UIImage *)gradientImageWithFame:(CGRect)rect andColorArray:(NSArray*)colors;
++ (UIImage *)gradientImageWithSize:(CGSize)size andColorArray:(NSArray*)colors withColorLocations:(CGFloat*)locations;
 
 @end

@@ -11,9 +11,9 @@
 
 @interface Square : NSObject
 
-@property CGPoint point;
-@property CGFloat rotation;
-@property CGFloat scale;
+@property (assign, nonatomic) CGPoint point;
+@property (assign, nonatomic) CGFloat rotation;
+@property (assign, nonatomic) CGFloat scale;
 
 - (void)createBuffers;
 - (void)deleteBuffers;

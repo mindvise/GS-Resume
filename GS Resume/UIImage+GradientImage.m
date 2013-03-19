@@ -12,6 +12,7 @@
 
 @implementation UIImage (GradientImage)
 
+//Creates a UIImage from a drawn gradient layer. Gradient flows top to bottom.
 + (UIImage *)gradientImageWithFame:(CGRect)rect andColorArray:(NSArray*)colors
 {
     UIImage *image = nil;
@@ -33,6 +34,7 @@
     return image;
 }
 
+//Creates a UIImage from a drawn gradient. Gradient flows left to right.
 + (UIImage *)gradientImageWithSize:(CGSize)size andColorArray:(NSArray*)colors withColorLocations:(CGFloat*)locations
 {
     UIImage *image = nil;

@@ -57,7 +57,8 @@ NSString* const monthNamesArray[] = {
     return self;
 }
 
-//Init passing in a target and selector to send back information (usually selected date). Pass YES for isContentView if using in a UIPopoverController.
+//Init passing in a target and selector to send back information (usually selected date).
+//Pass YES for isContentView if using in a UIPopoverController.
 - (id)initWithTarget:(id)target andSelector:(SEL)selector asPopoverContentViewController:(BOOL)isContentViewController
 {
     self = [super init];

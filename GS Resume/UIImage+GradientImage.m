@@ -17,7 +17,7 @@
 {
     UIImage *image = nil;
     
-    if (colors > 0)
+    if (colors.count > 0)
     {
         CAGradientLayer *gradient = [CAGradientLayer layer];
         gradient.frame = rect;
@@ -39,7 +39,7 @@
 {
     UIImage *image = nil;
     
-    if (colors > 0)
+    if (colors.count > 0)
     {
         CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
         CGGradientRef gradientRef = CGGradientCreateWithColors(colorSpaceRef, (__bridge CFArrayRef)(colors), locations);

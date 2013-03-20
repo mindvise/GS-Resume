@@ -10,7 +10,7 @@
 #import <MapKit/MapKit.h>
 #import <GLKit/GLKit.h>
 
-@interface MapViewController : UIViewController <MKMapViewDelegate>
+@interface MapViewController : UIViewController <MKMapViewDelegate, UITextFieldDelegate>
 
 
 @end

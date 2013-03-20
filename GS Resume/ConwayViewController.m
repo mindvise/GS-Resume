@@ -19,6 +19,7 @@
     
     NSTimer *lifeTimer;
     __weak IBOutlet UIBarButtonItem *clearBarButton;
+    __weak IBOutlet UIBarButtonItem *generationBarButton;
 }
 
 @end
@@ -87,6 +88,9 @@
     {
         lifeArray[indexPath.row][indexPath.section] = 0;
     }
+    
+    generationBarButton.tag = 0;
+    generationBarButton.title = @"Generation: 0";
     
     [collectionView reloadItemsAtIndexPaths:@[indexPath]];
 }
@@ -248,12 +252,15 @@
         }
     }
     
+    generationBarButton.tag++;
+    generationBarButton.title = [NSString stringWithFormat:@"Generation: %d", generationBarButton.tag];
+    
     [lifeGridCollectionView reloadData];
 }
 
 #pragma mark - Game of Life Controls
 
-- (IBAction)cancelPressed:(UIBarButtonItem *)sender
+- (IBAction)clearPressed:(UIBarButtonItem *)sender
 {
     for (int y = 0; y < 13; y++)
     {
@@ -262,6 +269,9 @@
             lifeArray[x][y] = 0;
         }
     }
+    
+    generationBarButton.tag = 0;
+    generationBarButton.title = @"Generation: 0";
     
     [lifeGridCollectionView reloadData];
 }
@@ -277,7 +287,8 @@
         
         clearBarButton.enabled = NO;
         
-        lifeTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(calculateNextGeneration) userInfo:nil repeats:YES];
+        lifeTimer = [NSTimer timerWithTimeInterval:0.5 target:self selector:@selector(calculateNextGeneration) userInfo:nil repeats:YES];
+        [[NSRunLoop mainRunLoop] addTimer:lifeTimer forMode:NSRunLoopCommonModes];
     }
     else
     {

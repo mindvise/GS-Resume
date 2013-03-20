@@ -107,9 +107,20 @@
     }];
 }
 
+#pragma mark - Map View Delegate
+
 - (void)mapView:(MKMapView *)mapView didChangeUserTrackingMode:(MKUserTrackingMode)mode animated:(BOOL)animated
 {
     
+}
+
+#pragma mark - Text Field Delegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self searchButtonPressed:nil];
+    
+    return NO;
 }
 
 @end

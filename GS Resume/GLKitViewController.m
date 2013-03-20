@@ -105,6 +105,8 @@ const float VIEW_HEIGHT = 748.0f;
     [panRecognizer release], panRecognizer = nil;
     [rotateRecognizer release], rotateRecognizer = nil;
     [pinchRecognizer release], pinchRecognizer = nil;
+    [self_glkView().context release], self_glkView().context = nil;
+    [self.view release], self.view = nil;
     
     [super dealloc];
     
